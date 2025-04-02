@@ -9,8 +9,16 @@ sed -i "s#dev-arm#${HARBOR_GIT_BRANCH}-arm#g" harbor-arm/Makefile
 # execute build command：Download harbor source code
 cd harbor-arm
 git clone --branch ${HARBOR_GIT_BRANCH} https://github.com/goharbor/harbor.git src/github.com/goharbor/harbor
-cp -f 
+
+# 替换 harbor make
 # cp -f ../harbor/Makefile src/github.com/goharbor/harbor/
+# 替换photon make
+# 替换 base image
+cp -f ../harbor/make/photon/db/Dockerfile.base src/github.com/goharbor/harbor/make/photon/db/
+cp -f ../harbor/make/photon/nginx/Dockerfile.base src/github.com/goharbor/harbor/make/photon/nginx/
+cp -f ../harbor/make/photon/portal/Dockerfile.base src/github.com/goharbor/harbor/make/photon/portal/
+
+# 替换 photon
 # cp -f ../harbor/make/photon/Makefile src/github.com/goharbor/harbor/make/photon/
 # cp -f ../harbor/make/photon/registry/builder src/github.com/goharbor/harbor/make/photon/registry/
 # cp -f ../harbor/src/portal/src/app/shared/components/about-dialog/about-dialog.component.html src/github.com/goharbor/harbor/src/portal/src/app/shared/components/about-dialog/

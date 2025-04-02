@@ -1,6 +1,6 @@
-FROM photon:4.0
+FROM photon:4.0-20211206
 
-RUN tdnf install -y nginx shadow >> /dev/null \
+RUN tdnf install -y nginx-1.19.3 shadow >> /dev/null \
     && tdnf clean all \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log \
