@@ -7,7 +7,7 @@ WORKDIR /build_dir
 ARG npm_registry=https://registry.npmjs.org
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends python-yaml
+    && apt-get install -y --no-install-recommends python-yaml=3.12-1
 
 COPY src/portal/package.json /build_dir
 COPY src/portal/package-lock.json /build_dir
