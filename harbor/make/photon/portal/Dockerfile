@@ -5,9 +5,9 @@ FROM node:15.4.0 as nodeportal
 WORKDIR /build_dir
 
 ARG npm_registry=https://registry.npmjs.org
-
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends python-yaml
+    && apt-get install -y --no-install-recommends python-yaml=3.12-1
 
 COPY src/portal/package.json /build_dir
 COPY src/portal/package-lock.json /build_dir
