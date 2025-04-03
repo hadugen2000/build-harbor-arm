@@ -25,7 +25,7 @@ cp -f ../harbor/make/photon/portal/Dockerfile src/github.com/goharbor/harbor/mak
 # cp -f ../harbor/src/portal/src/app/shared/components/about-dialog/about-dialog.component.html src/github.com/goharbor/harbor/src/portal/src/app/shared/components/about-dialog/
 
 # compile redis
-make compile_redis
+# make compile_redis
 
 # Prepare to build arm architecture image data:
 make prepare_arm_data
