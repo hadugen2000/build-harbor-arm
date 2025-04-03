@@ -17,6 +17,7 @@ git clone --branch ${HARBOR_GIT_BRANCH} https://github.com/goharbor/harbor.git s
 cp -f ../harbor/make/photon/db/Dockerfile.base src/github.com/goharbor/harbor/make/photon/db/
 cp -f ../harbor/make/photon/nginx/Dockerfile.base src/github.com/goharbor/harbor/make/photon/nginx/
 cp -f ../harbor/make/photon/portal/Dockerfile.base src/github.com/goharbor/harbor/make/photon/portal/
+cp -f ../harbor/make/photon/portal/Dockerfile src/github.com/goharbor/harbor/make/photon/portal/
 
 # 替换 photon
 # cp -f ../harbor/make/photon/Makefile src/github.com/goharbor/harbor/make/photon/
