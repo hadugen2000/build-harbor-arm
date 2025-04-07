@@ -11,7 +11,7 @@ cd harbor-arm
 git clone --branch ${HARBOR_GIT_BRANCH} https://github.com/goharbor/harbor.git src/github.com/goharbor/harbor
 
 # 替换 harbor make
-# cp -f ../harbor/Makefile src/github.com/goharbor/harbor/
+ cp -f ../harbor/Makefile src/github.com/goharbor/harbor/
 # 替换photon make
 # 替换 base image
 cp -f ../harbor/make/photon/db/Dockerfile.base src/github.com/goharbor/harbor/make/photon/db/

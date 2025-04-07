@@ -491,7 +491,7 @@ package_online: update_prepare_version
 	@rm -rf $(HARBORPKG)
 	@echo "Done."
 
-package_offline: update_prepare_version compile build
+package_offline: update_prepare_version
 
 	@echo "packing offline package ..."
 	@cp -r make $(HARBORPKG)
